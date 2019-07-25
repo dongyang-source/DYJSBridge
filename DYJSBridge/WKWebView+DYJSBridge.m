@@ -168,10 +168,10 @@ static NSString *jsCommandForMethodName(NSArray *aliasNames,NSString *name) {
     }
     return responseCallbacks;
 }
-- (BOOL)uniqueId{
-    return [objc_getAssociatedObject(self, _cmd) integerValue];
+- (long)uniqueId{
+    return [objc_getAssociatedObject(self, _cmd) longValue];
 }
-- (void)setUniqueId:(NSInteger)uniqueId{
+- (void)setUniqueId:(long)uniqueId{
     objc_setAssociatedObject(self, @selector(uniqueId), @(uniqueId), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 @end
