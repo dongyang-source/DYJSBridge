@@ -138,7 +138,7 @@ JSBrigeExportAs(testMethodFour, - (void)testMethodFour:(NSDate *)date day:(NSInt
  * 使用cocoapods `pod DYJSBridge`
  * 手动集成
 	* 将所有在DYJSBridge项目中的文件拖入工程中
-	* 导入头文件 `#import "WKWebView+DYJSBridge.h"`
+	* 导入头文件 `#import <DYJSBridge/WKWebView+DYJSBridge.h>`
 
 
 ## 👨🏻‍💻 作者
