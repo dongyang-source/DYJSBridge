@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head lang="zh-cmn-Hans">
+        <meta charset="UTF-8">
+            <title>test</title>
+            <meta name="renderer" content="webkit">
+                <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+                    <meta name="viewport" content="width=device-width,initial-scale=0.5,user-scalable=no"/>
+                    
+                    </head>
+    <style>
+        .btn {
+            text-align: center;
+            background: dodgerblue;
+            color: white;
+            padding: 20px;
+            margin: 30px;
+            font-size: 24px;
+            border-radius: 4px;
+            box-shadow: 4px 2px 10px #999;
+        }
+    
+    .btn:active {
+        opacity: .7;
+        box-shadow: 4px 2px 10px #555;
+    }
+    
+        </style>
+    <body>
+        <div class="btn" onclick="nativeBridge.testMethodOne()">无参调用</div>
+        <div class="btn" onclick="nativeBridge.testMethodTwoDay((new Date()),2)">带普通参调用</div>
+        <div class="btn" onclick="testMethodThree()">带回调函数的调用</div>
+        <div class="btn" onclick="testMethodFour()">重命名方法的调用</div>
+        <div class="btn" hidden="hidden"></div>
+        <script>
+        
+        function testMethodThree() {
+            nativeBridge.testMethodThree(function (argument) {
+                // body...
+                var x = document.getElementsByClassName("btn")[2];
+                x.innerHTML = "带回调函数的调用" + argument;
+            })
+        }
+        
+        function testMethodFour() {
+            nativeBridge.testMethodFour(new Date(),2,function (argument) {
+                // body...
+                var x = document.getElementsByClassName("btn")[3];
+                x.innerHTML = "重命名方法的调用" + argument;
+            })
+        }
+        function callByOC(argument) {
+            var x = document.getElementsByClassName("btn")[4];
+            x.removeAttribute('hidden');
+            x.innerHTML = argument;
+        }
+        function callByOCWithcallBack(argument,responseCallback) {
+            var x = document.getElementsByClassName("btn")[4];
+            x.removeAttribute('hidden');
+            x.innerHTML =  argument;
+            responseCallback(new Date());
+        }
+        </script>
+    </body>
+</html>

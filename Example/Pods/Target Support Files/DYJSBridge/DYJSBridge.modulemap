@@ -1,0 +1,6 @@
+framework module DYJSBridge {
+  umbrella header "DYJSBridge-umbrella.h"
+
+  export *
+  module * { export * }
+}

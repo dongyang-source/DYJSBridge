@@ -1,0 +1,6 @@
+framework module Pods_DYJSBridge_Tests {
+  umbrella header "Pods-DYJSBridge_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
