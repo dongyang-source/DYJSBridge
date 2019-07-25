@@ -1,8 +1,8 @@
 # DYJSBridge
 
 [![Version](https://img.shields.io/cocoapods/v/DYJSBridge.svg?style=flat)](https://cocoapods.org/pods/DYJSBridge)
-[![License](https://img.shields.io/cocoapods/l/DYJSBridge.svg?style=flat)](https://cocoapods.org/pods/DYJSBridge)
-[![Platform](https://img.shields.io/cocoapods/p/DYJSBridge.svg?style=flat)](https://cocoapods.org/pods/DYJSBridge)  
+[![License](https://img.shields.io/cocoapods/l/DYJSBridge.svg?style=flat)](https://github.com/dongyang-source/DYJSBridge/blob/master/LICENSE)
+![Platform](https://img.shields.io/cocoapods/p/DYJSBridge.svg?style=flat)
 
 * 一个使用简单的WKWebView和原生通信框架，支持iOS8+。
 
